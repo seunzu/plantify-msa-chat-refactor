@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: chat
+  main:
+    web-application-type: reactive
+  web:
+    resources:
+      add-mappings: true
+      static-locations: classpath:/static/
+grpc:
+  server:
+    address: ${GRPC_SERVER_ADDRESS:localhost:50052}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus
+  metrics:
+    tags:
+      application: chat-service
+    distribution:
+      percentiles-histogram:
+        chat.stream.duration: true
+        chat.first.token.latency: true

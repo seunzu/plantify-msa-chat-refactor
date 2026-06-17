@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantiFy AI Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="phone-shell">
+    <section class="chat-panel" aria-label="AI chat demo">
+        <header class="chat-header">
+            <div class="avatar">AI</div>
+            <div>
+                <h1>PlantiFy Assistant</h1>
+                <p id="connectionStatus">연결 준비 중</p>
+            </div>
+        </header>
+
+        <div id="conversation" class="chat-box" aria-live="polite"></div>
+
+        <form id="chatForm" class="chat-input">
+            <input type="text" id="message" placeholder="메시지를 입력하세요" autocomplete="off" aria-label="메시지 입력">
+            <button type="submit">전송</button>
+        </form>
+    </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
